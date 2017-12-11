@@ -89,11 +89,19 @@ $(document).ready(function(){
             response += "<table class='flights'>";
             response += "<tr>" +
                 "<th class='dataFlightNr'>Flight number</th>";
-            if ($(window).width() < 900 && type == "arrival") {
+            if ($(window).width() > 900) {
                 response += "<th class='dataDepAir'>Departure airport</th>";
+            } else {
+                if(type != "departure") {
+                    response += "<th class='dataDepAir'>Departure airport</th>";
+                }
             }
-            if ($(window).width() < 900 && type == "departure") {
+            if ($(window).width() > 900) {
                 response += "<th class='dataArrAir'>Arrival airport</th>";
+            } else {
+                if (type != "arrival") {
+                    response += "<th class='dataArrAir'>Arrival airport</th>";
+                }
             }
             response += "<th class='dataDepTime'>Departure Time</th>" +
                 "<th class='dataArrTime'>Arrival Time</th>" +
@@ -105,11 +113,19 @@ $(document).ready(function(){
                 }
                 response += "<tr>" +
                     "<td class='dataFlightNr'>" + flight.number + "</td>";
-                if ($(window).width() < 900 && type == "arrival") {
+                if ($(window).width() > 900) {
                     response += "<td class='dataDepAir'>" + flight.departureAirport.name + "</td>";
+                } else {
+                    if(type != "departure") {
+                        response += "<td class='dataDepAir'>" + flight.departureAirport.name + "</td>";
+                    }
                 }
-                if ($(window).width() < 900 && type == "departure") {
+                if ($(window).width() > 900) {
                     response += "<td class='dataArrAir'>" + flight.arrivalAirport.name + "</td>";
+                } else {
+                    if (type != "arrival") {
+                        response += "<td class='dataArrAir'>" + flight.arrivalAirport.name + "</td>";
+                    }
                 }
                 response += "<td class='dataDepTime'>" + flight.departureTime.scheduled + calculateDelay(flight.departureTime.scheduled, flight.departureTime.estimated, flight.status.code) + "</td>" +
                     "<td class='dataArrTime'>" + flight.arrivalTime.scheduled + calculateDelay(flight.arrivalTime.scheduled, flight.arrivalTime.estimated, flight.status.code) + "</td>";
