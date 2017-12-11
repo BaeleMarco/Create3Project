@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><img src="images/logo.png"></a>
+                <ul id="nav-mobile" class="right">
+                    <li><a href="#">Baele Marco</a></li>
+                    <li><a href="badges.html"><!--Components--></a></li>
+                    <li><a href="collapsible.html"><!--JavaScript--></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <form name="search" action="post" class="clearfix">
+                <div class="col s12">
+                    <i class="material-icons flight-icon">flights</i>
+                    <p id="toggle" data-type="departure">Departing from:<small>change</small></p>
+                </div>
+                <div class="col s12">
+                    <select name="stations">
+                        <option value="" disabled selected>Choose your option</option>
+                    </select>
+                    <button class="btn waves-effect waves-light right" type="submit" name="action" disabled="disabled">Flights
+                        <i class="material-icons right">search</i>
+                    </button>
+                </div>
+            </form>
+            <div class="loading">
+                <div class="plane-spinner">
+                    <div class="spinner-plane">
+                    </div>
+                </div>
+            </div>
+            <div id="data">
+
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <!--<script src="js/plugins.js"></script>-->
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <!--<script>-->
+            <!--window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;-->
+            <!--ga('create','UA-XXXXX-Y','auto');ga('send','pageview')-->
+        <!--</script>-->
+        <!--<script src="https://www.google-analytics.com/analytics.js" async defer></script>-->
+    </body>
+</html>
